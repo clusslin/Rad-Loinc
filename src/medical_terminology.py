@@ -145,7 +145,12 @@ BODY_PARTS = {
     'heel': 'Heel',
     'calcaneus': 'Calcaneus',
 
-    # Vascular
+    # Vascular and Heart
+    'heart': 'Heart',
+    'cardiac': 'Heart',
+    'coronary': 'Coronary artery',
+    'coronary artery': 'Coronary artery',
+    'coronary arteries': 'Coronary artery',
     'aorta': 'Aorta',
     'carotid': 'Carotid artery',
     'vertebral artery': 'Vertebral artery',
@@ -153,6 +158,8 @@ BODY_PARTS = {
     'renal artery': 'Renal artery',
     'iliac artery': 'Iliac artery',
     'femoral artery': 'Femoral artery',
+    'angiography': 'Angiography',
+    'angiogram': 'Angiography',
 
     # Other
     'whole body': 'Whole body',
@@ -267,11 +274,17 @@ CHINESE_BODY_PARTS = {
     '足跟': 'Heel',
     '跟骨': 'Calcaneus',
 
-    # 血管
+    # 心血管
+    '心': 'Heart',
+    '心臟': 'Heart',
+    '冠狀動脈': 'Coronary artery',
+    '冠脈': 'Coronary artery',
     '主動脈': 'Aorta',
     '頸動脈': 'Carotid artery',
     '肺動脈': 'Pulmonary artery',
     '腎動脈': 'Renal artery',
+    '血管攝影': 'Angiography',
+    '血管造影': 'Angiography',
 
     # 其他
     '全身': 'Whole body',

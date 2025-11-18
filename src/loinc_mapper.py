@@ -23,6 +23,63 @@ class LOINCMapper:
         modality_upper = modality.upper()
         return self.modality_map.get(modality_upper, modality_upper)
 
+    def _filter_body_parts(self, body_parts: List[str]) -> List[str]:
+        """
+        Filter out non-specific or false positive body parts
+
+        Args:
+            body_parts: List of identified body parts
+
+        Returns:
+            Filtered list of body parts
+        """
+        # Body parts to exclude (often false positives from abbreviations)
+        exclude_list = ['Face', 'Bone']
+
+        filtered = []
+        for part in body_parts:
+            if part not in exclude_list:
+                filtered.append(part)
+
+        # If filtering removed everything, keep original list
+        if not filtered and body_parts:
+            return body_parts
+
+        return filtered
+
+    def _select_best_loinc(self, loinc_codes: List[Tuple[str, Dict]], body_parts: List[str]) -> Tuple[str, Dict]:
+        """
+        Select the best LOINC code from multiple matches
+
+        Prioritizes more specific anatomical terms
+
+        Args:
+            loinc_codes: List of (body_part, loinc_info) tuples
+            body_parts: Original list of body parts
+
+        Returns:
+            Best (body_part, loinc_info) tuple
+        """
+        if len(loinc_codes) == 1:
+            return loinc_codes[0]
+
+        # Priority order for specific terms
+        priority_keywords = [
+            'Cervical spine', 'Thoracic spine', 'Lumbar spine', 'Lumbosacral spine',
+            'Coronary artery', 'Carotid artery', 'Renal artery',
+            'Left', 'Right', 'Bilateral'
+        ]
+
+        # First, try priority keywords
+        for keyword in priority_keywords:
+            for body_part, loinc_info in loinc_codes:
+                if keyword.lower() in body_part.lower():
+                    return (body_part, loinc_info)
+
+        # Prefer longer/more specific terms
+        sorted_codes = sorted(loinc_codes, key=lambda x: len(x[0]), reverse=True)
+        return sorted_codes[0]
+
     def find_loinc_code(
         self,
         body_part: str,
@@ -111,6 +168,9 @@ class LOINCMapper:
         if not primary_modality:
             primary_modality = modality
 
+        # Filter out non-specific body parts that might be false positives
+        filtered_body_parts = self._filter_body_parts(parsed['body_parts'])
+
         result = {
             'value_code': value_code,
             'modality': modality,
@@ -119,7 +179,7 @@ class LOINCMapper:
             'study_description': study_desc,
             'chinese_description': chinese_desc,
             'expanded_description': parsed['expanded_description'],
-            'body_parts': parsed['body_parts'],
+            'body_parts': filtered_body_parts,
             'laterality': parsed['laterality'],
             'contrast': contrast,
             'loinc_code': None,
@@ -133,7 +193,7 @@ class LOINCMapper:
 
         # Try to find LOINC code for each body part
         loinc_codes = []
-        for body_part in parsed['body_parts']:
+        for body_part in filtered_body_parts:
             loinc_info = self.find_loinc_code(
                 body_part,
                 primary_modality,
@@ -144,8 +204,8 @@ class LOINCMapper:
                 loinc_codes.append((body_part, loinc_info))
 
         if loinc_codes:
-            # Use the first match (most specific)
-            body_part, loinc_info = loinc_codes[0]
+            # Use the best match (most specific)
+            body_part, loinc_info = self._select_best_loinc(loinc_codes, filtered_body_parts)
             result['loinc_code'] = loinc_info['code']
             result['loinc_long_name'] = loinc_info['long_name']
             result['loinc_component'] = loinc_info['component']
@@ -171,7 +231,7 @@ class LOINCMapper:
                 result['mapping_confidence'] = 'None'
 
         # Additional validation
-        if not parsed['body_parts']:
+        if not filtered_body_parts:
             result['issues'].append('No body part identified')
             result['has_issues'] = True
 

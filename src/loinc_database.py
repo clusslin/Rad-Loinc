@@ -90,6 +90,18 @@ LOINC_DATABASE = {
         'component': 'Brain',
         'method': 'MRI'
     },
+    ('Brain', 'MRI', None, 'Y'): {
+        'code': '24555-5',
+        'long_name': 'MRI Brain W contrast IV',
+        'component': 'Brain',
+        'method': 'MRI'
+    },
+    ('Brain', 'MRI', None, 'N'): {
+        'code': '24556-3',
+        'long_name': 'MRI Brain W/O contrast',
+        'component': 'Brain',
+        'method': 'MRI'
+    },
 
     # Spine
     ('Cervical spine', 'CR', None, 'N'): {
@@ -110,7 +122,19 @@ LOINC_DATABASE = {
         'component': 'Cervical spine',
         'method': 'MRI'
     },
+    ('Cervical spine', 'MRI', None, 'N'): {
+        'code': '24852-6',
+        'long_name': 'MRI Cervical spine W/O contrast',
+        'component': 'Cervical spine',
+        'method': 'MRI'
+    },
     ('Lumbar spine', 'CR', None, 'N'): {
+        'code': '36714-4',
+        'long_name': 'XR Lumbar spine',
+        'component': 'Lumbar spine',
+        'method': 'XR'
+    },
+    ('Lumbar spine', 'XR', None, 'N'): {
         'code': '36714-4',
         'long_name': 'XR Lumbar spine',
         'component': 'Lumbar spine',
@@ -128,9 +152,21 @@ LOINC_DATABASE = {
         'component': 'Lumbar spine',
         'method': 'MRI'
     },
+    ('Lumbar spine', 'MRI', None, 'N'): {
+        'code': '24860-9',
+        'long_name': 'MRI Lumbar spine W/O contrast',
+        'component': 'Lumbar spine',
+        'method': 'MRI'
+    },
 
-    # Extremities
+    # Extremities - Hand
     ('Hand', 'CR', 'Right', 'N'): {
+        'code': '37362-0',
+        'long_name': 'XR Hand - right',
+        'component': 'Hand - right',
+        'method': 'XR'
+    },
+    ('Hand', 'XR', 'Right', 'N'): {
         'code': '37362-0',
         'long_name': 'XR Hand - right',
         'component': 'Hand - right',
@@ -142,7 +178,20 @@ LOINC_DATABASE = {
         'component': 'Hand - left',
         'method': 'XR'
     },
+    ('Hand', 'XR', 'Left', 'N'): {
+        'code': '37361-2',
+        'long_name': 'XR Hand - left',
+        'component': 'Hand - left',
+        'method': 'XR'
+    },
+    # Extremities - Knee
     ('Knee', 'CR', 'Right', 'N'): {
+        'code': '37628-4',
+        'long_name': 'XR Knee - right',
+        'component': 'Knee - right',
+        'method': 'XR'
+    },
+    ('Knee', 'XR', 'Right', 'N'): {
         'code': '37628-4',
         'long_name': 'XR Knee - right',
         'component': 'Knee - right',
@@ -154,7 +203,31 @@ LOINC_DATABASE = {
         'component': 'Knee - left',
         'method': 'XR'
     },
+    ('Knee', 'XR', 'Left', 'N'): {
+        'code': '37627-6',
+        'long_name': 'XR Knee - left',
+        'component': 'Knee - left',
+        'method': 'XR'
+    },
+    ('Knee', 'CR', 'Bilateral', 'N'): {
+        'code': '69161-8',
+        'long_name': 'XR Knee - bilateral',
+        'component': 'Knee - bilateral',
+        'method': 'XR'
+    },
+    ('Knee', 'XR', 'Bilateral', 'N'): {
+        'code': '69161-8',
+        'long_name': 'XR Knee - bilateral',
+        'component': 'Knee - bilateral',
+        'method': 'XR'
+    },
     ('Knee', 'MR', 'Right', 'N'): {
+        'code': '24876-5',
+        'long_name': 'MRI Knee - right W/O contrast',
+        'component': 'Knee - right',
+        'method': 'MRI'
+    },
+    ('Knee', 'MRI', 'Right', 'N'): {
         'code': '24876-5',
         'long_name': 'MRI Knee - right W/O contrast',
         'component': 'Knee - right',
@@ -166,9 +239,21 @@ LOINC_DATABASE = {
         'component': 'Knee - left',
         'method': 'MRI'
     },
+    ('Knee', 'MRI', 'Left', 'N'): {
+        'code': '24875-7',
+        'long_name': 'MRI Knee - left W/O contrast',
+        'component': 'Knee - left',
+        'method': 'MRI'
+    },
 
     # Pelvis
     ('Pelvis', 'CR', None, 'N'): {
+        'code': '37748-0',
+        'long_name': 'XR Pelvis',
+        'component': 'Pelvis',
+        'method': 'XR'
+    },
+    ('Pelvis', 'XR', None, 'N'): {
         'code': '37748-0',
         'long_name': 'XR Pelvis',
         'component': 'Pelvis',
@@ -214,6 +299,58 @@ LOINC_DATABASE = {
         'component': 'Kidney',
         'method': 'US'
     },
+    ('Kidney', 'US', 'Bilateral', 'N'): {
+        'code': '24642-1',
+        'long_name': 'US Kidney bilateral',
+        'component': 'Kidney',
+        'method': 'US'
+    },
+
+    # KUB (Kidney Ureter Bladder)
+    ('Kidney', 'CT', None, 'N'): {
+        'code': '24645-4',
+        'long_name': 'CT Kidney W/O contrast',
+        'component': 'Kidney',
+        'method': 'CT'
+    },
+    ('Ureter', 'CT', None, 'N'): {
+        'code': '72171-2',
+        'long_name': 'CT Ureter',
+        'component': 'Ureter',
+        'method': 'CT'
+    },
+    ('Bladder', 'CT', None, 'N'): {
+        'code': '24538-1',
+        'long_name': 'CT Bladder W/O contrast',
+        'component': 'Bladder',
+        'method': 'CT'
+    },
+
+    # Heart and Vascular
+    ('Heart', 'XA', None, 'Y'): {
+        'code': '42798-6',
+        'long_name': 'XA Heart',
+        'component': 'Heart',
+        'method': 'XA'
+    },
+    ('Heart', 'Angio', None, 'Y'): {
+        'code': '42798-6',
+        'long_name': 'Angiography Heart',
+        'component': 'Heart',
+        'method': 'Angio'
+    },
+    ('Coronary artery', 'XA', None, 'Y'): {
+        'code': '42798-6',
+        'long_name': 'XA Coronary arteries',
+        'component': 'Coronary artery',
+        'method': 'XA'
+    },
+    ('Coronary artery', 'Angio', None, 'Y'): {
+        'code': '42798-6',
+        'long_name': 'Angiography Coronary arteries',
+        'component': 'Coronary artery',
+        'method': 'Angio'
+    },
 
     # Bone density
     ('Spine', 'BMD', None, 'N'): {
@@ -222,7 +359,19 @@ LOINC_DATABASE = {
         'component': 'Spine',
         'method': 'DXA'
     },
+    ('Spine', 'DXA', None, 'N'): {
+        'code': '38262-7',
+        'long_name': 'DXA Bone density in Spine',
+        'component': 'Spine',
+        'method': 'DXA'
+    },
     ('Hip', 'BMD', None, 'N'): {
+        'code': '38263-5',
+        'long_name': 'DXA Bone density in Hip',
+        'component': 'Hip',
+        'method': 'DXA'
+    },
+    ('Hip', 'DXA', None, 'N'): {
         'code': '38263-5',
         'long_name': 'DXA Bone density in Hip',
         'component': 'Hip',
