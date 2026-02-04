@@ -377,6 +377,594 @@ LOINC_DATABASE = {
         'component': 'Hip',
         'method': 'DXA'
     },
+
+    # === EXPANDED DATABASE - Additional common radiology studies ===
+
+    # Thoracic spine
+    ('Thoracic spine', 'CR', None, 'N'): {
+        'code': '36715-1',
+        'long_name': 'XR Thoracic spine',
+        'component': 'Thoracic spine',
+        'method': 'XR'
+    },
+    ('Thoracic spine', 'XR', None, 'N'): {
+        'code': '36715-1',
+        'long_name': 'XR Thoracic spine',
+        'component': 'Thoracic spine',
+        'method': 'XR'
+    },
+    ('Thoracic spine', 'CT', None, 'N'): {
+        'code': '24801-3',
+        'long_name': 'CT Thoracic spine W/O contrast',
+        'component': 'Thoracic spine',
+        'method': 'CT'
+    },
+    ('Thoracic spine', 'MR', None, 'N'): {
+        'code': '24856-7',
+        'long_name': 'MRI Thoracic spine W/O contrast',
+        'component': 'Thoracic spine',
+        'method': 'MRI'
+    },
+    ('Thoracic spine', 'MRI', None, 'N'): {
+        'code': '24856-7',
+        'long_name': 'MRI Thoracic spine W/O contrast',
+        'component': 'Thoracic spine',
+        'method': 'MRI'
+    },
+
+    # Spine with contrast
+    ('Cervical spine', 'MR', None, 'Y'): {
+        'code': '24851-8',
+        'long_name': 'MRI Cervical spine W contrast IV',
+        'component': 'Cervical spine',
+        'method': 'MRI'
+    },
+    ('Cervical spine', 'MRI', None, 'Y'): {
+        'code': '24851-8',
+        'long_name': 'MRI Cervical spine W contrast IV',
+        'component': 'Cervical spine',
+        'method': 'MRI'
+    },
+    ('Thoracic spine', 'MR', None, 'Y'): {
+        'code': '24855-9',
+        'long_name': 'MRI Thoracic spine W contrast IV',
+        'component': 'Thoracic spine',
+        'method': 'MRI'
+    },
+    ('Thoracic spine', 'MRI', None, 'Y'): {
+        'code': '24855-9',
+        'long_name': 'MRI Thoracic spine W contrast IV',
+        'component': 'Thoracic spine',
+        'method': 'MRI'
+    },
+    ('Lumbar spine', 'MR', None, 'Y'): {
+        'code': '24859-1',
+        'long_name': 'MRI Lumbar spine W contrast IV',
+        'component': 'Lumbar spine',
+        'method': 'MRI'
+    },
+    ('Lumbar spine', 'MRI', None, 'Y'): {
+        'code': '24859-1',
+        'long_name': 'MRI Lumbar spine W contrast IV',
+        'component': 'Lumbar spine',
+        'method': 'MRI'
+    },
+
+    # Shoulder
+    ('Shoulder', 'CR', 'Right', 'N'): {
+        'code': '37016-2',
+        'long_name': 'XR Shoulder - right',
+        'component': 'Shoulder - right',
+        'method': 'XR'
+    },
+    ('Shoulder', 'XR', 'Right', 'N'): {
+        'code': '37016-2',
+        'long_name': 'XR Shoulder - right',
+        'component': 'Shoulder - right',
+        'method': 'XR'
+    },
+    ('Shoulder', 'CR', 'Left', 'N'): {
+        'code': '37015-4',
+        'long_name': 'XR Shoulder - left',
+        'component': 'Shoulder - left',
+        'method': 'XR'
+    },
+    ('Shoulder', 'XR', 'Left', 'N'): {
+        'code': '37015-4',
+        'long_name': 'XR Shoulder - left',
+        'component': 'Shoulder - left',
+        'method': 'XR'
+    },
+    ('Shoulder', 'MR', 'Right', 'N'): {
+        'code': '24882-3',
+        'long_name': 'MRI Shoulder - right W/O contrast',
+        'component': 'Shoulder - right',
+        'method': 'MRI'
+    },
+    ('Shoulder', 'MRI', 'Right', 'N'): {
+        'code': '24882-3',
+        'long_name': 'MRI Shoulder - right W/O contrast',
+        'component': 'Shoulder - right',
+        'method': 'MRI'
+    },
+    ('Shoulder', 'MR', 'Left', 'N'): {
+        'code': '24881-5',
+        'long_name': 'MRI Shoulder - left W/O contrast',
+        'component': 'Shoulder - left',
+        'method': 'MRI'
+    },
+    ('Shoulder', 'MRI', 'Left', 'N'): {
+        'code': '24881-5',
+        'long_name': 'MRI Shoulder - left W/O contrast',
+        'component': 'Shoulder - left',
+        'method': 'MRI'
+    },
+
+    # Elbow
+    ('Elbow', 'CR', 'Right', 'N'): {
+        'code': '37256-4',
+        'long_name': 'XR Elbow - right',
+        'component': 'Elbow - right',
+        'method': 'XR'
+    },
+    ('Elbow', 'XR', 'Right', 'N'): {
+        'code': '37256-4',
+        'long_name': 'XR Elbow - right',
+        'component': 'Elbow - right',
+        'method': 'XR'
+    },
+    ('Elbow', 'CR', 'Left', 'N'): {
+        'code': '37255-6',
+        'long_name': 'XR Elbow - left',
+        'component': 'Elbow - left',
+        'method': 'XR'
+    },
+    ('Elbow', 'XR', 'Left', 'N'): {
+        'code': '37255-6',
+        'long_name': 'XR Elbow - left',
+        'component': 'Elbow - left',
+        'method': 'XR'
+    },
+
+    # Wrist
+    ('Wrist', 'CR', 'Right', 'N'): {
+        'code': '37022-0',
+        'long_name': 'XR Wrist - right',
+        'component': 'Wrist - right',
+        'method': 'XR'
+    },
+    ('Wrist', 'XR', 'Right', 'N'): {
+        'code': '37022-0',
+        'long_name': 'XR Wrist - right',
+        'component': 'Wrist - right',
+        'method': 'XR'
+    },
+    ('Wrist', 'CR', 'Left', 'N'): {
+        'code': '37021-2',
+        'long_name': 'XR Wrist - left',
+        'component': 'Wrist - left',
+        'method': 'XR'
+    },
+    ('Wrist', 'XR', 'Left', 'N'): {
+        'code': '37021-2',
+        'long_name': 'XR Wrist - left',
+        'component': 'Wrist - left',
+        'method': 'XR'
+    },
+
+    # Hip X-ray
+    ('Hip', 'CR', 'Right', 'N'): {
+        'code': '37606-0',
+        'long_name': 'XR Hip - right',
+        'component': 'Hip - right',
+        'method': 'XR'
+    },
+    ('Hip', 'XR', 'Right', 'N'): {
+        'code': '37606-0',
+        'long_name': 'XR Hip - right',
+        'component': 'Hip - right',
+        'method': 'XR'
+    },
+    ('Hip', 'CR', 'Left', 'N'): {
+        'code': '37605-2',
+        'long_name': 'XR Hip - left',
+        'component': 'Hip - left',
+        'method': 'XR'
+    },
+    ('Hip', 'XR', 'Left', 'N'): {
+        'code': '37605-2',
+        'long_name': 'XR Hip - left',
+        'component': 'Hip - left',
+        'method': 'XR'
+    },
+    ('Hip', 'CR', 'Bilateral', 'N'): {
+        'code': '37604-5',
+        'long_name': 'XR Hip - bilateral',
+        'component': 'Hip - bilateral',
+        'method': 'XR'
+    },
+    ('Hip', 'XR', 'Bilateral', 'N'): {
+        'code': '37604-5',
+        'long_name': 'XR Hip - bilateral',
+        'component': 'Hip - bilateral',
+        'method': 'XR'
+    },
+    ('Hip', 'MR', 'Right', 'N'): {
+        'code': '24869-0',
+        'long_name': 'MRI Hip - right W/O contrast',
+        'component': 'Hip - right',
+        'method': 'MRI'
+    },
+    ('Hip', 'MRI', 'Right', 'N'): {
+        'code': '24869-0',
+        'long_name': 'MRI Hip - right W/O contrast',
+        'component': 'Hip - right',
+        'method': 'MRI'
+    },
+    ('Hip', 'MR', 'Left', 'N'): {
+        'code': '24868-2',
+        'long_name': 'MRI Hip - left W/O contrast',
+        'component': 'Hip - left',
+        'method': 'MRI'
+    },
+    ('Hip', 'MRI', 'Left', 'N'): {
+        'code': '24868-2',
+        'long_name': 'MRI Hip - left W/O contrast',
+        'component': 'Hip - left',
+        'method': 'MRI'
+    },
+
+    # Ankle
+    ('Ankle', 'CR', 'Right', 'N'): {
+        'code': '37048-2',
+        'long_name': 'XR Ankle - right',
+        'component': 'Ankle - right',
+        'method': 'XR'
+    },
+    ('Ankle', 'XR', 'Right', 'N'): {
+        'code': '37048-2',
+        'long_name': 'XR Ankle - right',
+        'component': 'Ankle - right',
+        'method': 'XR'
+    },
+    ('Ankle', 'CR', 'Left', 'N'): {
+        'code': '37047-4',
+        'long_name': 'XR Ankle - left',
+        'component': 'Ankle - left',
+        'method': 'XR'
+    },
+    ('Ankle', 'XR', 'Left', 'N'): {
+        'code': '37047-4',
+        'long_name': 'XR Ankle - left',
+        'component': 'Ankle - left',
+        'method': 'XR'
+    },
+    ('Ankle', 'MR', 'Right', 'N'): {
+        'code': '24900-3',
+        'long_name': 'MRI Ankle - right W/O contrast',
+        'component': 'Ankle - right',
+        'method': 'MRI'
+    },
+    ('Ankle', 'MRI', 'Right', 'N'): {
+        'code': '24900-3',
+        'long_name': 'MRI Ankle - right W/O contrast',
+        'component': 'Ankle - right',
+        'method': 'MRI'
+    },
+    ('Ankle', 'MR', 'Left', 'N'): {
+        'code': '24899-7',
+        'long_name': 'MRI Ankle - left W/O contrast',
+        'component': 'Ankle - left',
+        'method': 'MRI'
+    },
+    ('Ankle', 'MRI', 'Left', 'N'): {
+        'code': '24899-7',
+        'long_name': 'MRI Ankle - left W/O contrast',
+        'component': 'Ankle - left',
+        'method': 'MRI'
+    },
+
+    # Foot
+    ('Foot', 'CR', 'Right', 'N'): {
+        'code': '37542-4',
+        'long_name': 'XR Foot - right',
+        'component': 'Foot - right',
+        'method': 'XR'
+    },
+    ('Foot', 'XR', 'Right', 'N'): {
+        'code': '37542-4',
+        'long_name': 'XR Foot - right',
+        'component': 'Foot - right',
+        'method': 'XR'
+    },
+    ('Foot', 'CR', 'Left', 'N'): {
+        'code': '37541-6',
+        'long_name': 'XR Foot - left',
+        'component': 'Foot - left',
+        'method': 'XR'
+    },
+    ('Foot', 'XR', 'Left', 'N'): {
+        'code': '37541-6',
+        'long_name': 'XR Foot - left',
+        'component': 'Foot - left',
+        'method': 'XR'
+    },
+
+    # Skull and Facial bones
+    ('Skull', 'CR', None, 'N'): {
+        'code': '36588-2',
+        'long_name': 'XR Skull',
+        'component': 'Skull',
+        'method': 'XR'
+    },
+    ('Skull', 'XR', None, 'N'): {
+        'code': '36588-2',
+        'long_name': 'XR Skull',
+        'component': 'Skull',
+        'method': 'XR'
+    },
+
+    # Sinus
+    ('Sinus', 'CR', None, 'N'): {
+        'code': '36740-9',
+        'long_name': 'XR Paranasal sinuses',
+        'component': 'Sinus',
+        'method': 'XR'
+    },
+    ('Sinus', 'XR', None, 'N'): {
+        'code': '36740-9',
+        'long_name': 'XR Paranasal sinuses',
+        'component': 'Sinus',
+        'method': 'XR'
+    },
+    ('Sinus', 'CT', None, 'N'): {
+        'code': '24671-0',
+        'long_name': 'CT Paranasal sinuses W/O contrast',
+        'component': 'Sinus',
+        'method': 'CT'
+    },
+
+    # Neck
+    ('Neck', 'CT', None, 'N'): {
+        'code': '24551-4',
+        'long_name': 'CT Neck W/O contrast',
+        'component': 'Neck',
+        'method': 'CT'
+    },
+    ('Neck', 'CT', None, 'Y'): {
+        'code': '24550-6',
+        'long_name': 'CT Neck W contrast IV',
+        'component': 'Neck',
+        'method': 'CT'
+    },
+    ('Neck', 'MR', None, 'N'): {
+        'code': '24864-1',
+        'long_name': 'MRI Neck W/O contrast',
+        'component': 'Neck',
+        'method': 'MRI'
+    },
+    ('Neck', 'MRI', None, 'N'): {
+        'code': '24864-1',
+        'long_name': 'MRI Neck W/O contrast',
+        'component': 'Neck',
+        'method': 'MRI'
+    },
+    ('Neck', 'MR', None, 'Y'): {
+        'code': '24863-3',
+        'long_name': 'MRI Neck W contrast IV',
+        'component': 'Neck',
+        'method': 'MRI'
+    },
+    ('Neck', 'MRI', None, 'Y'): {
+        'code': '24863-3',
+        'long_name': 'MRI Neck W contrast IV',
+        'component': 'Neck',
+        'method': 'MRI'
+    },
+
+    # Chest MRI
+    ('Chest', 'MR', None, 'N'): {
+        'code': '24629-8',
+        'long_name': 'MRI Chest W/O contrast',
+        'component': 'Chest',
+        'method': 'MRI'
+    },
+    ('Chest', 'MRI', None, 'N'): {
+        'code': '24629-8',
+        'long_name': 'MRI Chest W/O contrast',
+        'component': 'Chest',
+        'method': 'MRI'
+    },
+
+    # Abdomen MRI
+    ('Abdomen', 'MR', None, 'N'): {
+        'code': '24637-1',
+        'long_name': 'MRI Abdomen W/O contrast',
+        'component': 'Abdomen',
+        'method': 'MRI'
+    },
+    ('Abdomen', 'MRI', None, 'N'): {
+        'code': '24637-1',
+        'long_name': 'MRI Abdomen W/O contrast',
+        'component': 'Abdomen',
+        'method': 'MRI'
+    },
+    ('Abdomen', 'MR', None, 'Y'): {
+        'code': '24636-3',
+        'long_name': 'MRI Abdomen W contrast IV',
+        'component': 'Abdomen',
+        'method': 'MRI'
+    },
+    ('Abdomen', 'MRI', None, 'Y'): {
+        'code': '24636-3',
+        'long_name': 'MRI Abdomen W contrast IV',
+        'component': 'Abdomen',
+        'method': 'MRI'
+    },
+
+    # Pelvis CT with contrast
+    ('Pelvis', 'CT', None, 'Y'): {
+        'code': '24906-0',
+        'long_name': 'CT Pelvis W contrast IV',
+        'component': 'Pelvis',
+        'method': 'CT'
+    },
+
+    # Additional Ultrasound
+    ('Gallbladder', 'US', None, 'N'): {
+        'code': '30707-4',
+        'long_name': 'US Gallbladder',
+        'component': 'Gallbladder',
+        'method': 'US'
+    },
+    ('Pancreas', 'US', None, 'N'): {
+        'code': '30708-2',
+        'long_name': 'US Pancreas',
+        'component': 'Pancreas',
+        'method': 'US'
+    },
+    ('Spleen', 'US', None, 'N'): {
+        'code': '30709-0',
+        'long_name': 'US Spleen',
+        'component': 'Spleen',
+        'method': 'US'
+    },
+    ('Thyroid', 'US', None, 'N'): {
+        'code': '30734-8',
+        'long_name': 'US Thyroid',
+        'component': 'Thyroid',
+        'method': 'US'
+    },
+    ('Breast', 'US', 'Right', 'N'): {
+        'code': '24604-1',
+        'long_name': 'US Breast - right',
+        'component': 'Breast - right',
+        'method': 'US'
+    },
+    ('Breast', 'US', 'Left', 'N'): {
+        'code': '24603-3',
+        'long_name': 'US Breast - left',
+        'component': 'Breast - left',
+        'method': 'US'
+    },
+    ('Breast', 'US', 'Bilateral', 'N'): {
+        'code': '24602-5',
+        'long_name': 'US Breast - bilateral',
+        'component': 'Breast - bilateral',
+        'method': 'US'
+    },
+    ('Pelvis', 'US', None, 'N'): {
+        'code': '30710-8',
+        'long_name': 'US Pelvis',
+        'component': 'Pelvis',
+        'method': 'US'
+    },
+    ('Scrotum', 'US', None, 'N'): {
+        'code': '30712-4',
+        'long_name': 'US Scrotum',
+        'component': 'Scrotum',
+        'method': 'US'
+    },
+
+    # Vascular studies
+    ('Carotid artery', 'US', None, 'N'): {
+        'code': '24728-8',
+        'long_name': 'US Carotid artery',
+        'component': 'Carotid artery',
+        'method': 'US'
+    },
+    ('Carotid artery', 'US', 'Bilateral', 'N'): {
+        'code': '24728-8',
+        'long_name': 'US Carotid artery bilateral',
+        'component': 'Carotid artery',
+        'method': 'US'
+    },
+
+    # CT Angiography
+    ('Aorta', 'CT', None, 'Y'): {
+        'code': '30598-7',
+        'long_name': 'CTA Aorta',
+        'component': 'Aorta',
+        'method': 'CTA'
+    },
+    ('Coronary artery', 'CT', None, 'Y'): {
+        'code': '79073-5',
+        'long_name': 'CTA Coronary arteries',
+        'component': 'Coronary artery',
+        'method': 'CTA'
+    },
+    ('Pulmonary artery', 'CT', None, 'Y'): {
+        'code': '36814-3',
+        'long_name': 'CTA Pulmonary artery',
+        'component': 'Pulmonary artery',
+        'method': 'CTA'
+    },
+
+    # MR Angiography
+    ('Brain', 'MRA', None, 'N'): {
+        'code': '24590-2',
+        'long_name': 'MRA Brain W/O contrast',
+        'component': 'Brain',
+        'method': 'MRA'
+    },
+    ('Brain', 'MRA', None, 'Y'): {
+        'code': '24589-4',
+        'long_name': 'MRA Brain W contrast IV',
+        'component': 'Brain',
+        'method': 'MRA'
+    },
+    ('Neck', 'MRA', None, 'N'): {
+        'code': '24597-7',
+        'long_name': 'MRA Neck W/O contrast',
+        'component': 'Neck',
+        'method': 'MRA'
+    },
+    ('Neck', 'MRA', None, 'Y'): {
+        'code': '24596-9',
+        'long_name': 'MRA Neck W contrast IV',
+        'component': 'Neck',
+        'method': 'MRA'
+    },
+
+    # Mammography
+    ('Breast', 'MG', 'Right', 'N'): {
+        'code': '24606-6',
+        'long_name': 'MG Breast - right screening',
+        'component': 'Breast - right',
+        'method': 'MG'
+    },
+    ('Breast', 'MG', 'Left', 'N'): {
+        'code': '24605-8',
+        'long_name': 'MG Breast - left screening',
+        'component': 'Breast - left',
+        'method': 'MG'
+    },
+    ('Breast', 'MG', 'Bilateral', 'N'): {
+        'code': '24604-1',
+        'long_name': 'MG Breast - bilateral screening',
+        'component': 'Breast - bilateral',
+        'method': 'MG'
+    },
+
+    # Whole body
+    ('Whole body', 'CT', None, 'Y'): {
+        'code': '24962-3',
+        'long_name': 'CT Whole body W contrast IV',
+        'component': 'Whole body',
+        'method': 'CT'
+    },
+    ('Whole body', 'CT', None, 'N'): {
+        'code': '24963-1',
+        'long_name': 'CT Whole body W/O contrast',
+        'component': 'Whole body',
+        'method': 'CT'
+    },
+    ('Whole body', 'BMD', None, 'N'): {
+        'code': '38265-0',
+        'long_name': 'DXA Whole body bone density',
+        'component': 'Whole body',
+        'method': 'DXA'
+    },
 }
 
 # Modality to LOINC method mapping

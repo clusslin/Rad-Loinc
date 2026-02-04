@@ -585,6 +585,974 @@ ICD10PCS_DATABASE = {
         'qualifier1': 'Z',
         'qualifier2': 'Z'
     },
+
+    # === EXPANDED DATABASE - Additional common radiology procedures ===
+
+    # Head CT/MRI (B0)
+    ('Head', 'CT', None, 'N'): {
+        'code': 'B020ZZZ',
+        'description': 'CT Head without contrast',
+        'section': 'B',
+        'body_system': '0',
+        'root_type': '2',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Head', 'CT', None, 'Y'): {
+        'code': 'B0200ZZ',
+        'description': 'CT Head with contrast',
+        'section': 'B',
+        'body_system': '0',
+        'root_type': '2',
+        'body_part': '0',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Thoracic Spine (BR)
+    ('Thoracic spine', 'CR', None, 'N'): {
+        'code': 'BR01ZZZ',
+        'description': 'Plain Radiography Thoracic Spine',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '0',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Thoracic spine', 'XR', None, 'N'): {
+        'code': 'BR01ZZZ',
+        'description': 'Plain Radiography Thoracic Spine',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '0',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Thoracic spine', 'CT', None, 'N'): {
+        'code': 'BR21ZZZ',
+        'description': 'CT Thoracic Spine without contrast',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '2',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Thoracic spine', 'MR', None, 'N'): {
+        'code': 'BR31ZZZ',
+        'description': 'MRI Thoracic Spine without contrast',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '3',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Thoracic spine', 'MRI', None, 'N'): {
+        'code': 'BR31ZZZ',
+        'description': 'MRI Thoracic Spine without contrast',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '3',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Spine with contrast
+    ('Cervical spine', 'MR', None, 'Y'): {
+        'code': 'BR300ZZ',
+        'description': 'MRI Cervical Spine with contrast',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '3',
+        'body_part': '0',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Cervical spine', 'MRI', None, 'Y'): {
+        'code': 'BR300ZZ',
+        'description': 'MRI Cervical Spine with contrast',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '3',
+        'body_part': '0',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Thoracic spine', 'MR', None, 'Y'): {
+        'code': 'BR310ZZ',
+        'description': 'MRI Thoracic Spine with contrast',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '3',
+        'body_part': '1',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Thoracic spine', 'MRI', None, 'Y'): {
+        'code': 'BR310ZZ',
+        'description': 'MRI Thoracic Spine with contrast',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '3',
+        'body_part': '1',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Lumbar spine', 'MR', None, 'Y'): {
+        'code': 'BR330ZZ',
+        'description': 'MRI Lumbar Spine with contrast',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '3',
+        'body_part': '3',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Lumbar spine', 'MRI', None, 'Y'): {
+        'code': 'BR330ZZ',
+        'description': 'MRI Lumbar Spine with contrast',
+        'section': 'B',
+        'body_system': 'R',
+        'root_type': '3',
+        'body_part': '3',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Shoulder (BP)
+    ('Shoulder', 'CR', 'Right', 'N'): {
+        'code': 'BP08ZZZ',
+        'description': 'Plain Radiography Right Shoulder',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': '8',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Shoulder', 'XR', 'Right', 'N'): {
+        'code': 'BP08ZZZ',
+        'description': 'Plain Radiography Right Shoulder',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': '8',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Shoulder', 'CR', 'Left', 'N'): {
+        'code': 'BP09ZZZ',
+        'description': 'Plain Radiography Left Shoulder',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': '9',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Shoulder', 'XR', 'Left', 'N'): {
+        'code': 'BP09ZZZ',
+        'description': 'Plain Radiography Left Shoulder',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': '9',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Shoulder', 'MR', 'Right', 'N'): {
+        'code': 'BP38ZZZ',
+        'description': 'MRI Right Shoulder without contrast',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '3',
+        'body_part': '8',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Shoulder', 'MRI', 'Right', 'N'): {
+        'code': 'BP38ZZZ',
+        'description': 'MRI Right Shoulder without contrast',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '3',
+        'body_part': '8',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Shoulder', 'MR', 'Left', 'N'): {
+        'code': 'BP39ZZZ',
+        'description': 'MRI Left Shoulder without contrast',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '3',
+        'body_part': '9',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Shoulder', 'MRI', 'Left', 'N'): {
+        'code': 'BP39ZZZ',
+        'description': 'MRI Left Shoulder without contrast',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '3',
+        'body_part': '9',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Elbow (BP)
+    ('Elbow', 'CR', 'Right', 'N'): {
+        'code': 'BP0CZZZ',
+        'description': 'Plain Radiography Right Elbow',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': 'C',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Elbow', 'XR', 'Right', 'N'): {
+        'code': 'BP0CZZZ',
+        'description': 'Plain Radiography Right Elbow',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': 'C',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Elbow', 'CR', 'Left', 'N'): {
+        'code': 'BP0DZZZ',
+        'description': 'Plain Radiography Left Elbow',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': 'D',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Elbow', 'XR', 'Left', 'N'): {
+        'code': 'BP0DZZZ',
+        'description': 'Plain Radiography Left Elbow',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': 'D',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Wrist (BP)
+    ('Wrist', 'CR', 'Right', 'N'): {
+        'code': 'BP0HZZZ',
+        'description': 'Plain Radiography Right Wrist',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': 'H',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Wrist', 'XR', 'Right', 'N'): {
+        'code': 'BP0HZZZ',
+        'description': 'Plain Radiography Right Wrist',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': 'H',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Wrist', 'CR', 'Left', 'N'): {
+        'code': 'BP0JZZZ',
+        'description': 'Plain Radiography Left Wrist',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': 'J',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Wrist', 'XR', 'Left', 'N'): {
+        'code': 'BP0JZZZ',
+        'description': 'Plain Radiography Left Wrist',
+        'section': 'B',
+        'body_system': 'P',
+        'root_type': '0',
+        'body_part': 'J',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Hip (BQ)
+    ('Hip', 'CR', 'Right', 'N'): {
+        'code': 'BQ00ZZZ',
+        'description': 'Plain Radiography Right Hip',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Hip', 'XR', 'Right', 'N'): {
+        'code': 'BQ00ZZZ',
+        'description': 'Plain Radiography Right Hip',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Hip', 'CR', 'Left', 'N'): {
+        'code': 'BQ01ZZZ',
+        'description': 'Plain Radiography Left Hip',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Hip', 'XR', 'Left', 'N'): {
+        'code': 'BQ01ZZZ',
+        'description': 'Plain Radiography Left Hip',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Hip', 'CR', 'Bilateral', 'N'): {
+        'code': 'BQ02ZZZ',
+        'description': 'Plain Radiography Bilateral Hips',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': '2',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Hip', 'XR', 'Bilateral', 'N'): {
+        'code': 'BQ02ZZZ',
+        'description': 'Plain Radiography Bilateral Hips',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': '2',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Hip', 'MR', 'Right', 'N'): {
+        'code': 'BQ30ZZZ',
+        'description': 'MRI Right Hip without contrast',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '3',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Hip', 'MRI', 'Right', 'N'): {
+        'code': 'BQ30ZZZ',
+        'description': 'MRI Right Hip without contrast',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '3',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Hip', 'MR', 'Left', 'N'): {
+        'code': 'BQ31ZZZ',
+        'description': 'MRI Left Hip without contrast',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '3',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Hip', 'MRI', 'Left', 'N'): {
+        'code': 'BQ31ZZZ',
+        'description': 'MRI Left Hip without contrast',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '3',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Ankle (BQ)
+    ('Ankle', 'CR', 'Right', 'N'): {
+        'code': 'BQ0GZZZ',
+        'description': 'Plain Radiography Right Ankle',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': 'G',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Ankle', 'XR', 'Right', 'N'): {
+        'code': 'BQ0GZZZ',
+        'description': 'Plain Radiography Right Ankle',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': 'G',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Ankle', 'CR', 'Left', 'N'): {
+        'code': 'BQ0HZZZ',
+        'description': 'Plain Radiography Left Ankle',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': 'H',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Ankle', 'XR', 'Left', 'N'): {
+        'code': 'BQ0HZZZ',
+        'description': 'Plain Radiography Left Ankle',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': 'H',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Foot (BQ)
+    ('Foot', 'CR', 'Right', 'N'): {
+        'code': 'BQ0LZZZ',
+        'description': 'Plain Radiography Right Foot',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': 'L',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Foot', 'XR', 'Right', 'N'): {
+        'code': 'BQ0LZZZ',
+        'description': 'Plain Radiography Right Foot',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': 'L',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Foot', 'CR', 'Left', 'N'): {
+        'code': 'BQ0MZZZ',
+        'description': 'Plain Radiography Left Foot',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': 'M',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Foot', 'XR', 'Left', 'N'): {
+        'code': 'BQ0MZZZ',
+        'description': 'Plain Radiography Left Foot',
+        'section': 'B',
+        'body_system': 'Q',
+        'root_type': '0',
+        'body_part': 'M',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Skull (BN)
+    ('Skull', 'CR', None, 'N'): {
+        'code': 'BN00ZZZ',
+        'description': 'Plain Radiography Skull',
+        'section': 'B',
+        'body_system': 'N',
+        'root_type': '0',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Skull', 'XR', None, 'N'): {
+        'code': 'BN00ZZZ',
+        'description': 'Plain Radiography Skull',
+        'section': 'B',
+        'body_system': 'N',
+        'root_type': '0',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Paranasal Sinuses (B9)
+    ('Sinus', 'CR', None, 'N'): {
+        'code': 'B92BZZZ',
+        'description': 'Plain Radiography Paranasal Sinuses',
+        'section': 'B',
+        'body_system': '9',
+        'root_type': '0',
+        'body_part': 'B',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Sinus', 'XR', None, 'N'): {
+        'code': 'B92BZZZ',
+        'description': 'Plain Radiography Paranasal Sinuses',
+        'section': 'B',
+        'body_system': '9',
+        'root_type': '0',
+        'body_part': 'B',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Sinus', 'CT', None, 'N'): {
+        'code': 'B92BZZZ',
+        'description': 'CT Paranasal Sinuses without contrast',
+        'section': 'B',
+        'body_system': '9',
+        'root_type': '2',
+        'body_part': 'B',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Neck (B9)
+    ('Neck', 'CT', None, 'N'): {
+        'code': 'B92GZZZ',
+        'description': 'CT Neck without contrast',
+        'section': 'B',
+        'body_system': '9',
+        'root_type': '2',
+        'body_part': 'G',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Neck', 'CT', None, 'Y'): {
+        'code': 'B92G0ZZ',
+        'description': 'CT Neck with contrast',
+        'section': 'B',
+        'body_system': '9',
+        'root_type': '2',
+        'body_part': 'G',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Neck', 'MR', None, 'N'): {
+        'code': 'B93GZZZ',
+        'description': 'MRI Neck without contrast',
+        'section': 'B',
+        'body_system': '9',
+        'root_type': '3',
+        'body_part': 'G',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Neck', 'MRI', None, 'N'): {
+        'code': 'B93GZZZ',
+        'description': 'MRI Neck without contrast',
+        'section': 'B',
+        'body_system': '9',
+        'root_type': '3',
+        'body_part': 'G',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Neck', 'MR', None, 'Y'): {
+        'code': 'B93G0ZZ',
+        'description': 'MRI Neck with contrast',
+        'section': 'B',
+        'body_system': '9',
+        'root_type': '3',
+        'body_part': 'G',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Neck', 'MRI', None, 'Y'): {
+        'code': 'B93G0ZZ',
+        'description': 'MRI Neck with contrast',
+        'section': 'B',
+        'body_system': '9',
+        'root_type': '3',
+        'body_part': 'G',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Chest MRI (BW)
+    ('Chest', 'MR', None, 'N'): {
+        'code': 'BW34ZZZ',
+        'description': 'MRI Chest without contrast',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '3',
+        'body_part': '4',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Chest', 'MRI', None, 'N'): {
+        'code': 'BW34ZZZ',
+        'description': 'MRI Chest without contrast',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '3',
+        'body_part': '4',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Abdomen MRI (BW)
+    ('Abdomen', 'MR', None, 'N'): {
+        'code': 'BW30ZZZ',
+        'description': 'MRI Abdomen without contrast',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '3',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Abdomen', 'MRI', None, 'N'): {
+        'code': 'BW30ZZZ',
+        'description': 'MRI Abdomen without contrast',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '3',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Abdomen', 'MR', None, 'Y'): {
+        'code': 'BW300ZZ',
+        'description': 'MRI Abdomen with contrast',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '3',
+        'body_part': '0',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Abdomen', 'MRI', None, 'Y'): {
+        'code': 'BW300ZZ',
+        'description': 'MRI Abdomen with contrast',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '3',
+        'body_part': '0',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Pelvis CT with contrast
+    ('Pelvis', 'CT', None, 'Y'): {
+        'code': 'BW2G0ZZ',
+        'description': 'CT Pelvis with contrast',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '2',
+        'body_part': 'G',
+        'contrast': '0',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Pelvis MRI
+    ('Pelvis', 'MR', None, 'N'): {
+        'code': 'BW3GZZZ',
+        'description': 'MRI Pelvis without contrast',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '3',
+        'body_part': 'G',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Pelvis', 'MRI', None, 'N'): {
+        'code': 'BW3GZZZ',
+        'description': 'MRI Pelvis without contrast',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '3',
+        'body_part': 'G',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Additional Ultrasound (BF, BT, BW)
+    ('Gallbladder', 'US', None, 'N'): {
+        'code': 'BF44ZZZ',
+        'description': 'Ultrasonography Gallbladder',
+        'section': 'B',
+        'body_system': 'F',
+        'root_type': '4',
+        'body_part': '4',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Pancreas', 'US', None, 'N'): {
+        'code': 'BF46ZZZ',
+        'description': 'Ultrasonography Pancreas',
+        'section': 'B',
+        'body_system': 'F',
+        'root_type': '4',
+        'body_part': '6',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Spleen', 'US', None, 'N'): {
+        'code': 'BF4CZZZ',
+        'description': 'Ultrasonography Spleen',
+        'section': 'B',
+        'body_system': 'F',
+        'root_type': '4',
+        'body_part': 'C',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Thyroid', 'US', None, 'N'): {
+        'code': 'BG44ZZZ',
+        'description': 'Ultrasonography Thyroid Gland',
+        'section': 'B',
+        'body_system': 'G',
+        'root_type': '4',
+        'body_part': '4',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Pelvis', 'US', None, 'N'): {
+        'code': 'BW4CZZZ',
+        'description': 'Ultrasonography Pelvis',
+        'section': 'B',
+        'body_system': 'W',
+        'root_type': '4',
+        'body_part': 'C',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Scrotum', 'US', None, 'N'): {
+        'code': 'BV44ZZZ',
+        'description': 'Ultrasonography Scrotum',
+        'section': 'B',
+        'body_system': 'V',
+        'root_type': '4',
+        'body_part': '4',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Breast Ultrasound (BH)
+    ('Breast', 'US', 'Right', 'N'): {
+        'code': 'BH40ZZZ',
+        'description': 'Ultrasonography Right Breast',
+        'section': 'B',
+        'body_system': 'H',
+        'root_type': '4',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Breast', 'US', 'Left', 'N'): {
+        'code': 'BH41ZZZ',
+        'description': 'Ultrasonography Left Breast',
+        'section': 'B',
+        'body_system': 'H',
+        'root_type': '4',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Breast', 'US', 'Bilateral', 'N'): {
+        'code': 'BH42ZZZ',
+        'description': 'Ultrasonography Bilateral Breasts',
+        'section': 'B',
+        'body_system': 'H',
+        'root_type': '4',
+        'body_part': '2',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Mammography (BH)
+    ('Breast', 'MG', 'Right', 'N'): {
+        'code': 'BH00ZZZ',
+        'description': 'Mammography Right Breast',
+        'section': 'B',
+        'body_system': 'H',
+        'root_type': '0',
+        'body_part': '0',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Breast', 'MG', 'Left', 'N'): {
+        'code': 'BH01ZZZ',
+        'description': 'Mammography Left Breast',
+        'section': 'B',
+        'body_system': 'H',
+        'root_type': '0',
+        'body_part': '1',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Breast', 'MG', 'Bilateral', 'N'): {
+        'code': 'BH02ZZZ',
+        'description': 'Mammography Bilateral Breasts',
+        'section': 'B',
+        'body_system': 'H',
+        'root_type': '0',
+        'body_part': '2',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # Vascular (B3, B5)
+    ('Carotid artery', 'US', None, 'N'): {
+        'code': 'B345ZZZ',
+        'description': 'Ultrasonography Carotid Artery',
+        'section': 'B',
+        'body_system': '3',
+        'root_type': '4',
+        'body_part': '5',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Carotid artery', 'US', 'Bilateral', 'N'): {
+        'code': 'B345ZZZ',
+        'description': 'Ultrasonography Bilateral Carotid Arteries',
+        'section': 'B',
+        'body_system': '3',
+        'root_type': '4',
+        'body_part': '5',
+        'contrast': 'Z',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+
+    # CT Angiography
+    ('Aorta', 'CT', None, 'Y'): {
+        'code': 'B320YZZ',
+        'description': 'CT Thoracic Aorta with contrast',
+        'section': 'B',
+        'body_system': '3',
+        'root_type': '2',
+        'body_part': '0',
+        'contrast': 'Y',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Coronary artery', 'CT', None, 'Y'): {
+        'code': 'B226YZZ',
+        'description': 'CT Coronary Arteries with contrast',
+        'section': 'B',
+        'body_system': '2',
+        'root_type': '2',
+        'body_part': '6',
+        'contrast': 'Y',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
+    ('Pulmonary artery', 'CT', None, 'Y'): {
+        'code': 'B32SYZZ',
+        'description': 'CT Pulmonary Arteries with contrast',
+        'section': 'B',
+        'body_system': '3',
+        'root_type': '2',
+        'body_part': 'S',
+        'contrast': 'Y',
+        'qualifier1': 'Z',
+        'qualifier2': 'Z'
+    },
 }
 
 # Modality to ICD-10-PCS Root Type mapping
