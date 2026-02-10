@@ -16,6 +16,18 @@ A tool for automatically mapping radiology examinations to LOINC (Logical Observ
 - 批次處理Excel檔案 (Batch processing of Excel files)
 - 問題標記與信心度評估 (Issue flagging and confidence assessment)
 
+## vLLM 智慧分類 (vLLM Intelligent Classification)
+
+新增基於 vLLM (Large Language Model) 的智慧分類功能，用於處理複雜或模糊的檢查描述：
+- **智慧推斷**: 利用 LLM 理解語意，補足規則式 (Rule-based) 映射的不足。
+- **自動化標註**: 針對未匹配的項目進行自動分類建議。
+- **批次處理**: 支援大量數據的批次推論。
+
+**New vLLM-based intelligent classification feature for complex or ambiguous descriptions:**
+- **Intelligent Inference**: Uses LLM to understand semantics and supplement rule-based mapping.
+- **Automated Labeling**: Provides classification suggestions for unmatched items.
+- **Batch Processing**: Supports batch inference for large datasets.
+
 ## 支援的影像檢查類型 (Supported Modalities)
 
 - CR/XR (Conventional Radiography / X-ray)
@@ -88,6 +100,22 @@ python rad_dual_mapper.py -i examples/sample_input.csv -o results/dual_output.xl
 # 詳細模式
 python rad_dual_mapper.py -i input.xlsx -o output.xlsx -v
 ```
+
+### vLLM 智慧分類 (vLLM Classification)
+
+**1. 準備資料 (Prepare Data):**
+```bash
+# 將原始 Excel 轉換為模型輸入格式
+python prepare_input.py
+```
+這會產生 `examples/rad_prepared.xlsx`。
+
+**2. 執行分類 (Run Classifier):**
+```bash
+# 使用 vLLM 伺服器進行分類
+python vllm_classifier.py
+```
+需確保 vLLM 伺服器已啟動並可連線 (預設 `http://localhost:8000/v1`)。
 
 ## 輸入格式 (Input Format)
 
@@ -240,6 +268,8 @@ Rad-Loinc/
 ├── requirements.txt             # Python相依套件
 ├── rad_loinc_mapper.py         # LOINC映射主程式
 ├── rad_dual_mapper.py          # 雙編碼映射主程式 (LOINC + ICD-10-PCS)
+├── vllm_classifier.py          # vLLM 分類主程式
+├── prepare_input.py            # vLLM 資料準備腳本
 ├── test_mapper.py              # 測試腳本
 ├── test_dual_mapper.py         # 雙編碼測試腳本
 ├── src/                        # 原始碼目錄
