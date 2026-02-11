@@ -94,7 +94,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", default="examples/rad_prepared.xlsx")
     parser.add_argument("--output", default="rad_llm_classified.xlsx")
-    parser.add_argument("--model", default="Qwen/Qwen2.5-3B-Instruct")
+    parser.add_argument("--model", default="aaditya/OpenBioLLM-Llama3-8B")
     args = parser.parse_args()
     
     classify_studies(args.input, args.output, args.model)

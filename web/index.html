@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rad-LOINC & ICD-10-PCS Mapper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <h1>Rad-LOINC Mapper</h1>
+            </div>
+            <p>放射線檢查項目智慧編碼轉換工具</p>
+        </header>
+
+        <main>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="single">單筆查詢 (Single)</button>
+                <button class="tab-btn" data-tab="search">代碼搜索 (Search)</button>
+                <button class="tab-btn" data-tab="ai">AI 助手 (Assistant)</button>
+                <button class="tab-btn" data-tab="batch">批次處理 (Batch)</button>
+            </div>
+
+            <div class="tab-content active" id="single-tab">
+                <div class="card">
+                    <h2>單筆資料轉換</h2>
+                    <form id="single-form">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="modality">檢查類型 (Modality)</label>
+                                <select id="modality" name="modality" required>
+                                    <option value="">選擇類型...</option>
+                                    <option value="CT">CT (電腦斷層)</option>
+                                    <option value="MR">MR (磁振造影)</option>
+                                    <option value="CR">CR/XR (一般X光)</option>
+                                    <option value="US">US (超音波)</option>
+                                    <option value="RF">RF (透視攝影)</option>
+                                    <option value="XA">XA (血管攝影)</option>
+                                    <option value="BMD">BMD (骨密度)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contrast">對比劑 (Contrast)</label>
+                                <select id="contrast" name="contrast">
+                                    <option value="N">No (無對比劑)</option>
+                                    <option value="Y">Yes (有對比劑)</option>
+                                    <option value="N+Y">N+Y (含與不含)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="study_desc">檢查描述 (Study Description)</label>
+                            <input type="text" id="study_desc" name="study_desc" placeholder="e.g. Chest PA view"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chinese_desc">中文描述 (Optional)</label>
+                            <input type="text" id="chinese_desc" name="chinese_desc" placeholder="例如: 胸部正面">
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="map-btn">
+                            <span class="btn-text">開始轉換</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                    </form>
+
+                    <div id="result-area" class="result-area hidden">
+                        <div class="result-card loinc-card">
+                            <div class="result-header">
+                                <h3>LOINC Code</h3>
+                                <span class="badge" id="loinc-confidence">High</span>
+                            </div>
+                            <div class="result-body">
+                                <div class="code-display" id="loinc-code">Loading...</div>
+                                <p id="loinc-name">Loading...</p>
+                                <div class="tags" id="loinc-tags"></div>
+                            </div>
+                        </div>
+
+                        <div class="result-card icd-card">
+                            <div class="result-header">
+                                <h3>ICD-10-PCS Code</h3>
+                                <span class="badge" id="icd-confidence">High</span>
+                            </div>
+                            <div class="result-body">
+                                <div class="code-display" id="icd-code">Loading...</div>
+                                <p id="icd-desc">Loading...</p>
+                                <div class="tags" id="icd-tags"></div>
+                            </div>
+                        </div>
+
+                        <div id="issues-container" class="issues-alert hidden">
+                            <strong>⚠️ 注意事項:</strong>
+                            <ul id="issues-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="search-tab">
+                <div class="card">
+                    <h2>代碼搜索 (Code Search)</h2>
+                    <p class="description">使用關鍵字或語意搜尋 LOINC 與 ICD-10-PCS 代碼。</p>
+
+                    <form id="search-form">
+                        <div class="form-group-row">
+                            <div class="form-group" style="flex: 3;">
+                                <label for="search-query">搜尋關鍵字 (Search Query)</label>
+                                <input type="text" id="search-query" name="query" placeholder="e.g. Brain MRI contrast"
+                                    required>
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label for="search-strategy">搜尋策略 (Strategy)</label>
+                                <select id="search-strategy" name="strategy">
+                                    <option value="hybrid">混合 (Hybrid)</option>
+                                    <option value="keyword">關鍵字 (Keyword)</option>
+                                    <option value="semantic">語意 (Semantic)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>搜尋範圍 (Scope):</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="code_type" value="both" checked> 兩者 (Both)</label>
+                                <label><input type="radio" name="code_type" value="loinc"> LOINC Only</label>
+                                <label><input type="radio" name="code_type" value="icd"> ICD-10-PCS Only</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="search-btn">
+                            <span class="btn-text">搜尋</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                    </form>
+
+                    <div id="search-results-area" class="result-area hidden">
+                        <div class="result-section">
+                            <h3>LOINC Results</h3>
+                            <div id="loinc-results-list" class="results-list"></div>
+                        </div>
+                        <div class="result-section">
+                            <h3>ICD-10-PCS Results</h3>
+                            <div id="icd-results-list" class="results-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="ai-tab">
+                <div class="card">
+                    <div class="ai-header">
+                        <h2>AI 醫學助手 (Medical AI Assistant)</h2>
+                        <div class="ai-controls">
+                            <span id="llm-status-badge" class="badge none">Unloaded</span>
+                            <button id="btn-load-llm" class="btn-small">Load Model</button>
+                        </div>
+                    </div>
+                    <p class="description">使用 <strong>OpenBioLLM-Llama3-8B</strong> 進行放射線報告分析與編碼建議。</p>
+
+                    <div id="chat-container" class="chat-container">
+                        <div class="chat-message system">
+                            <div class="message-content">
+                                <p>你好！我是 Rad-LOINC AI 助手。請先載入模型，然後貼上放射線報告，我可以協助您分析並建議相關的 LOINC 與 ICD-10-PCS 代碼。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <textarea id="chat-input" placeholder="請輸入放射線報告或問題..." rows="3" disabled></textarea>
+                        <button id="btn-send-chat" class="btn-primary" disabled style="width: auto; padding: 0 2rem;">
+                            發送
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="batch-tab">
+                <div class="card">
+                    <h2>批次檔案處理</h2>
+                    <p class="description">上傳 Excel (.xlsx) 或 CSV 檔案進行整批轉換。</p>
+
+                    <div class="upload-zone" id="drop-zone">
+                        <div class="upload-icon">📂</div>
+                        <h3>拖放檔案至此或點擊上傳</h3>
+                        <p>支援 .xlsx, .csv 檔案</p>
+                        <input type="file" id="file-input" accept=".xlsx,.csv,.xls" hidden>
+                    </div>
+
+                    <div id="file-info" class="file-info hidden">
+                        <span class="file-name">filename.xlsx</span>
+                        <button class="remove-file">✕</button>
+                    </div>
+
+                    <div class="actions">
+                        <button id="process-btn" class="btn-primary" disabled>
+                            <span class="btn-text">開始批次轉換</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                    </div>
+
+                    <div id="download-section" class="download-section hidden">
+                        <div class="success-icon">✅</div>
+                        <h3>處理完成!</h3>
+                        <a id="download-link" href="#" class="btn-secondary">下載轉換結果</a>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <h3>下載範例檔案</h3>
+                    <div class="example-links">
+                        <a href="/api/download/sample_input" class="file-link">
+                            <span class="icon">📄</span> 範例輸入檔 (CSV)
+                        </a>
+                        <a href="/api/download/rad_template" class="file-link">
+                            <span class="icon">📊</span> 範例模板 (Excel)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Rad-LOINC Mapper. Designed for Radiology Informatics.</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

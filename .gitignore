@@ -49,3 +49,14 @@ results/
 # OS
 .DS_Store
 Thumbs.db
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+mapped_results_*.xlsx
+rad_llm_classified.xlsx
+loinc_embeddings.pkl
+icd_embeddings.pkl
+Loinc-data/
+data/LoincTableCore.csv
+data/*.pkl
